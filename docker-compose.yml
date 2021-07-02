@@ -1,0 +1,9 @@
+version: '3'
+services: 
+    minio-rest-api:
+        build: .
+        container_name: "mrapi-container"
+        ports: 
+            - "8000:15400"
+        volumes: 
+            - ./minio_rest_api/:/minio_rest_api
