@@ -5,5 +5,11 @@ services:
         container_name: "mrapi-container"
         ports: 
             - "8000:15400"
+        environment: 
+            TZ: "Europe/Sarajevo"
         volumes: 
             - ./minio_rest_api/:/minio_rest_api
+            - "/etc/timezone:/etc/timezone:ro"
+            - "/etc/localtime:/etc/localtime:ro"
+            
+        
