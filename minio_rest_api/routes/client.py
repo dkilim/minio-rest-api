@@ -38,7 +38,7 @@ def upload_file(bc: Upload):
 
 @cl.get('/download')
 def download_file(d: Download):
-    test=client.fget_object(d.bucket_name, d.object_name, d.file_path)
+    client.fget_object(d.bucket_name, d.object_name, d.file_path)
 
 @cl.delete('/delete-file')
 def delete_file(delete: Delete):
